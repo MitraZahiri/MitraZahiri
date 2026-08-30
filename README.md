@@ -1,16 +1,42 @@
-## Hi there 👋
+MITRA ZAHIRI
 
-<!--
-**MitraZahiri/MitraZahiri** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Creative Technologist
+UI/UX • Flutter • Embedded Interfaces
 
-Here are some ideas to get you started:
+────────────────────────────
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+ABOUT
+
+I design and develop digital interfaces
+where software meets physical products.
+
+────────────────────────────
+
+CURRENTLY EXPLORING
+
+◉ Interactive UI
+◉ Flutter
+◉ Embedded Interfaces
+◉ Android / AOSP
+◉ Micro-interactions
+
+────────────────────────────
+
+SELECTED WORK
+
+01  3D Product Card
+02  Animated Range Slider       → soon
+03  Theme Interaction           → soon
+04  Color System                → soon
+
+────────────────────────────
+
+TOOLS
+
+Flutter • Dart • Android
+HTML • CSS • JavaScript
+Figma • Git
+
+────────────────────────────
+
+GitHub     Behance     LinkedIn
