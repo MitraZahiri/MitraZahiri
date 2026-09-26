@@ -1,10 +1,10 @@
 <div align="center">
-  <img src="assets/header.svg" width="100%" alt="Mitra Zahiri — Software Engineer and Product Builder" />
+  <img src="header.svg" width="100%" alt="Mitra Zahiri — Software Engineer and Product Builder" />
 </div>
 
 <br>
 
-<img src="assets/profile.svg" width="100%" alt="Mitra profile terminal: role, focus, current stack and learning direction" />
+<img src="profile.svg" width="100%" alt="Mitra profile terminal: role, focus, current stack and learning direction" />
 
 I like engineering that people can **see, touch, and interact with**. My strongest current hands-on work is in mobile/product software, interaction-heavy interfaces, application architecture, and debugging.
 
@@ -14,7 +14,7 @@ The loop I keep coming back to is **real-world input → communication → state
 
 ## ⚡ Product shelf
 
-<a href="https://github.com/MitraZahiri/lcd-mockup-studio"><img src="assets/projects.svg" width="100%" alt="Featured projects: LCD Mockup Studio, NoName and RAY" /></a>
+<a href="https://github.com/MitraZahiri/lcd-mockup-studio"><img src="projects.svg" width="100%" alt="Featured projects: LCD Mockup Studio, NoName and RAY" /></a>
 
 **[LCD Mockup Studio](https://github.com/MitraZahiri/lcd-mockup-studio)** — browser-based LCD/HMI reconstruction and editing experiment with image analysis, OCR preprocessing and coordinate mapping.  
 **[NoName](https://github.com/MitraZahiri/noname)** — a Flutter product lab exploring expressive characters, state-driven behavior and interaction.  
@@ -22,7 +22,7 @@ The loop I keep coming back to is **real-world input → communication → state
 
 <br>
 
-<img src="assets/toolbox.svg" width="100%" alt="Mitra's engineering toolbox and learning path" />
+<img src="toolbox.svg" width="100%" alt="Mitra's engineering toolbox and learning path" />
 
 ### 🎛️ How I build
 
