@@ -1,16 +1,126 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420">
-<defs><pattern id="g" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#24333b" stroke-width="1"/></pattern></defs>
-<rect width="1200" height="420" rx="28" fill="#0b1115"/><rect width="1200" height="420" rx="28" fill="url(#g)" opacity=".55"/>
-<path d="M60 72h470M60 350h670" stroke="#ffb84d" stroke-width="3"/><circle cx="60" cy="72" r="6" fill="#63e6d3"/><circle cx="730" cy="350" r="6" fill="#63e6d3"/>
-<text x="60" y="145" fill="#f7f4e9" font-family="monospace" font-size="58" font-weight="700">MITRA ZAHIRI</text>
-<text x="63" y="190" fill="#63e6d3" font-family="monospace" font-size="22">SOFTWARE ENGINEER / PRODUCT BUILDER</text>
-<text x="63" y="250" fill="#ffb84d" font-family="monospace" font-size="27">IDEAS → SYSTEMS → THINGS THAT COME ALIVE.</text>
-<text x="63" y="292" fill="#a9b8be" font-family="monospace" font-size="18">interactive · mobile · connected products</text>
-<!-- workbench -->
-<rect x="800" y="74" width="190" height="270" rx="24" fill="#111c22" stroke="#63e6d3" stroke-width="3"/><rect x="825" y="102" width="140" height="165" rx="14" fill="#17262d" stroke="#ffb84d" stroke-width="2"/>
-<rect x="850" y="135" width="90" height="80" rx="12" fill="#0b1115" stroke="#63e6d3" stroke-width="2"/><circle cx="877" cy="170" r="6" fill="#ffb84d"/><circle cx="913" cy="170" r="6" fill="#ffb84d"/><path d="M875 194q20 14 40 0" fill="none" stroke="#63e6d3" stroke-width="3"/>
-<text x="852" y="239" fill="#a9b8be" font-family="monospace" font-size="12">NONAME://awake</text><circle cx="895" cy="304" r="12" fill="none" stroke="#ffb84d" stroke-width="3"/>
-<rect x="1018" y="118" width="120" height="90" rx="10" fill="#111c22" stroke="#ffb84d" stroke-width="3"/><text x="1037" y="155" fill="#63e6d3" font-family="monospace" font-size="14">LCD</text><path d="M1040 177h76M1040 187h50" stroke="#a9b8be" stroke-width="3"/>
-<path d="M1020 278h120M1040 250v54M1070 250v54M1100 250v54" stroke="#63e6d3" stroke-width="2"/><circle cx="1040" cy="250" r="7" fill="#ffb84d"/><circle cx="1100" cy="304" r="7" fill="#ffb84d"/>
-<text x="1017" y="335" fill="#a9b8be" font-family="monospace" font-size="12">SENSOR BUS / R&amp;D</text>
+<style>
+  .m{font-family:'JetBrains Mono','SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
+  .fb{transform-box:fill-box}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  @keyframes rise{0%{transform:translateY(80px)}100%{transform:translateY(0)}}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @keyframes pop{0%{opacity:0;transform:scale(0)}70%{opacity:1;transform:scale(1.25)}100%{opacity:1;transform:scale(1)}}
+  @keyframes sweep{0%{transform:translateX(-400px)}100%{transform:translateX(1600px)}}
+  @keyframes glitchA{0%,100%{opacity:0;transform:translate(0,0)}10%{opacity:.85;transform:translate(-6px,2px)}20%{opacity:.85;transform:translate(5px,-2px)}30%{opacity:0}}
+  @keyframes glitchB{0%,100%{opacity:0;transform:translate(0,0)}12%{opacity:.85;transform:translate(6px,-1px)}22%{opacity:.85;transform:translate(-4px,2px)}32%{opacity:0}}
+  @keyframes type{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @keyframes eye{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+  @keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+  @keyframes flow{to{stroke-dashoffset:-60}}
+  @keyframes ring{0%{transform:scale(.6);opacity:.9}100%{transform:scale(2.4);opacity:0}}
+  @keyframes shimmer{0%{transform:translateX(-300px)}60%,100%{transform:translateX(900px)}}
+  @keyframes lcd{0%,100%{transform:scaleX(.25)}50%{transform:scaleX(1)}}
+
+  .grid{opacity:0;animation:fade 1.2s ease-out .1s forwards}
+  .light{animation:sweep 2.2s cubic-bezier(.65,0,.35,1) .2s 1 both}
+  .ln{stroke-dasharray:700;stroke-dashoffset:700;animation:draw 1.1s cubic-bezier(.7,0,.2,1) forwards}
+  .ln1{animation-delay:.3s}.ln2{animation-delay:1.6s}
+  .dot{transform-origin:center;opacity:0;animation:pop .5s cubic-bezier(.34,1.56,.64,1) forwards}
+  .d1{animation-delay:.25s}.d2{animation-delay:2.5s}
+  .name{animation:rise .9s cubic-bezier(.16,1,.3,1) .55s both}
+  .gA{opacity:0;animation:glitchA .9s steps(1) 1.45s 1 both}
+  .gB{opacity:0;animation:glitchB .9s steps(1) 1.45s 1 both}
+  .sub{animation:rise .8s cubic-bezier(.16,1,.3,1) .9s both}
+  .tagclip{transform-origin:left;animation:type 1.6s steps(42) 1.6s both}
+  .cur{animation:blink 1s steps(1) infinite}
+  .meta{opacity:0;animation:fade .8s ease-out 3.2s forwards}
+  .shine{animation:shimmer 5s ease-in-out 3.5s infinite}
+
+  .dev{opacity:0;transform-origin:center;animation:pop .8s cubic-bezier(.34,1.56,.64,1) 1.1s forwards}
+  .floaty{animation:float 4s ease-in-out 2s infinite}
+  .eye{transform-origin:center;animation:eye 4s ease-in-out 2.5s infinite}
+  .glow{animation:pulse 2.4s ease-in-out infinite}
+  .lcdp{opacity:0;transform-origin:center;animation:pop .7s cubic-bezier(.34,1.56,.64,1) 1.5s forwards}
+  .bar{transform-origin:left;animation:lcd 2.6s ease-in-out infinite}
+  .bar2{animation-delay:-1.1s}
+  .bus{opacity:0;animation:fade .6s ease-out 1.9s forwards}
+  .data{stroke-dasharray:6 54;animation:flow 1.4s linear infinite}
+  .ring{transform-origin:center;animation:ring 2.4s ease-out infinite}
+  .ring2{animation-delay:1.2s}
+</style>
+<defs>
+  <pattern id="g" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#24333b" stroke-width="1"/></pattern>
+  <linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#63e6d3" stop-opacity="0"/><stop offset=".5" stop-color="#63e6d3" stop-opacity=".18"/><stop offset="1" stop-color="#63e6d3" stop-opacity="0"/></linearGradient>
+  <linearGradient id="sh" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <clipPath id="card"><rect width="1200" height="420" rx="28"/></clipPath>
+  <clipPath id="cName"><rect x="40" y="88" width="720" height="72"/></clipPath>
+  <clipPath id="cSub"><rect x="40" y="168" width="720" height="32"/></clipPath>
+  <clipPath id="cTag"><rect class="tagclip fb" x="60" y="222" width="680" height="40"/></clipPath>
+  <clipPath id="cShine"><text x="60" y="145" class="m" font-size="58" font-weight="700">MITRA ZAHIRI</text></clipPath>
+</defs>
+
+<g clip-path="url(#card)">
+  <rect width="1200" height="420" fill="#0b1115"/>
+  <rect class="grid" width="1200" height="420" fill="url(#g)"/>
+  <rect class="light" x="0" y="0" width="380" height="420" fill="url(#lg)"/>
+
+  <path class="ln ln1" d="M60 72h470" stroke="#ffb84d" stroke-width="3"/>
+  <path class="ln ln2" d="M60 350h670" stroke="#ffb84d" stroke-width="3"/>
+  <circle class="dot d1 fb" cx="60" cy="72" r="6" fill="#63e6d3"/>
+  <circle class="dot d2 fb" cx="730" cy="350" r="6" fill="#63e6d3"/>
+
+  <!-- name: slide up through mask + one-shot glitch -->
+  <g clip-path="url(#cName)">
+    <g class="name">
+      <text class="m gA" x="60" y="145" fill="#ff5d73" font-size="58" font-weight="700">MITRA ZAHIRI</text>
+      <text class="m gB" x="60" y="145" fill="#63e6d3" font-size="58" font-weight="700">MITRA ZAHIRI</text>
+      <text class="m" x="60" y="145" fill="#f7f4e9" font-size="58" font-weight="700">MITRA ZAHIRI</text>
+    </g>
+  </g>
+  <g clip-path="url(#cShine)"><rect class="shine" x="0" y="80" width="160" height="80" fill="url(#sh)"/></g>
+
+  <g clip-path="url(#cSub)"><text class="m sub" x="63" y="190" fill="#63e6d3" font-size="22" letter-spacing="2">SOFTWARE ENGINEER · FLUTTER &amp; ANDROID</text></g>
+
+  <g clip-path="url(#cTag)"><text class="m" x="63" y="250" fill="#ffb84d" font-size="27">IDEAS → SYSTEMS → THINGS THAT COME ALIVE.</text></g>
+  <rect class="cur" x="760" y="228" width="14" height="28" fill="#ffb84d" opacity=".9"/>
+
+  <g class="meta">
+    <text class="m" x="63" y="292" fill="#a9b8be" font-size="18">interfaces for real devices · interactive · connected products</text>
+    <text class="m" x="63" y="390" fill="#5d7079" font-size="13">// based in İzmir · open to Flutter / Android roles</text>
+  </g>
+
+  <!-- device: NoName companion -->
+  <g class="dev fb">
+    <g class="floaty">
+      <rect class="glow" x="792" y="66" width="206" height="286" rx="30" fill="none" stroke="#63e6d3" stroke-opacity=".35" stroke-width="8"/>
+      <rect x="800" y="74" width="190" height="270" rx="24" fill="#111c22" stroke="#63e6d3" stroke-width="3"/>
+      <rect x="825" y="102" width="140" height="165" rx="14" fill="#17262d" stroke="#ffb84d" stroke-width="2"/>
+      <rect x="850" y="135" width="90" height="80" rx="12" fill="#0b1115" stroke="#63e6d3" stroke-width="2"/>
+      <circle class="eye fb" cx="877" cy="170" r="6" fill="#ffb84d"/>
+      <circle class="eye fb" cx="913" cy="170" r="6" fill="#ffb84d"/>
+      <path d="M875 194q20 14 40 0" fill="none" stroke="#63e6d3" stroke-width="3" stroke-linecap="round"/>
+      <text class="m" x="850" y="239" fill="#a9b8be" font-size="12">NONAME://awake</text>
+      <circle cx="895" cy="304" r="12" fill="none" stroke="#ffb84d" stroke-width="3"/>
+      <circle class="glow" cx="895" cy="304" r="4" fill="#ffb84d"/>
+    </g>
+  </g>
+
+  <!-- LCD panel -->
+  <g class="lcdp fb">
+    <rect x="1018" y="118" width="120" height="90" rx="10" fill="#111c22" stroke="#ffb84d" stroke-width="3"/>
+    <text class="m" x="1037" y="155" fill="#63e6d3" font-size="14">LCD</text>
+    <rect class="bar fb" x="1040" y="174" width="76" height="4" rx="2" fill="#a9b8be"/>
+    <rect class="bar bar2 fb" x="1040" y="185" width="56" height="4" rx="2" fill="#a9b8be"/>
+  </g>
+
+  <!-- sensor bus with flowing data -->
+  <g class="bus">
+    <path d="M1020 278h120M1040 250v54M1070 250v54M1100 250v54" stroke="#24434a" stroke-width="2"/>
+    <path class="data" d="M1020 278h120" stroke="#63e6d3" stroke-width="3"/>
+    <path class="data" d="M1070 250v54" stroke="#63e6d3" stroke-width="3" style="animation-delay:-.5s"/>
+    <circle class="ring fb" cx="1040" cy="250" r="7" fill="none" stroke="#ffb84d" stroke-width="2"/>
+    <circle class="ring ring2 fb" cx="1100" cy="304" r="7" fill="none" stroke="#ffb84d" stroke-width="2"/>
+    <circle cx="1040" cy="250" r="7" fill="#ffb84d"/>
+    <circle cx="1100" cy="304" r="7" fill="#ffb84d"/>
+    <text class="m" x="1017" y="335" fill="#a9b8be" font-size="12">SENSOR BUS / R&amp;D</text>
+  </g>
+</g>
 </svg>

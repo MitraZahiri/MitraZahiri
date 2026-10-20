@@ -14,9 +14,10 @@ The loop I keep coming back to is **real-world input → communication → state
 
 ## ⚡ Product shelf
 
-<a href="https://github.com/MitraZahiri/lcd-mockup-studio"><img src="projects.svg" width="100%" alt="Featured projects: LCD Mockup Studio, NoName and RAY" /></a>
+<a href="https://github.com/MitraZahiri/lcd-mockup-studio"><img src="projects.svg" width="100%" alt="Featured projects: LCD Mockup Studio, GHARAR, NoName and RAY" /></a>
 
 **[LCD Mockup Studio](https://github.com/MitraZahiri/lcd-mockup-studio)** — browser-based LCD/HMI reconstruction and editing experiment with image analysis, OCR preprocessing and coordinate mapping.  
+**[GHARAR](https://github.com/MitraZahiri/GHARAR)** — a released Flutter app for couples: journal, daily questions with mutual reveal and a compatibility game.  
 **[NoName](https://github.com/MitraZahiri/noname)** — a Flutter product lab exploring expressive characters, state-driven behavior and interaction.  
 **[RĀY](https://github.com/MitraZahiri/ray-os)** — concept-stage R&D around sensing, device interaction and physical/digital product behavior.
 

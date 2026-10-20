@@ -1,5 +1,117 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470"><rect width="1200" height="470" rx="24" fill="#0b1115"/><text x="50" y="58" fill="#f7f4e9" font-family="monospace" font-size="24">FEATURED BUILDS // PRODUCT SHELF</text>
-<g font-family="monospace"><g fill="#111c22" stroke-width="2"><rect x="45" y="90" width="350" height="320" rx="18" stroke="#63e6d3"/><rect x="425" y="90" width="350" height="320" rx="18" stroke="#ffb84d"/><rect x="805" y="90" width="350" height="320" rx="18" stroke="#63e6d3"/></g>
-<text x="70" y="132" fill="#63e6d3" font-size="20">LCD MOCKUP STUDIO</text><rect x="70" y="158" width="300" height="120" rx="10" fill="#17262d"/><path d="M92 184h255M92 207h190M92 230h220" stroke="#ffb84d" stroke-width="4"/><text x="70" y="310" fill="#e8ece9" font-size="15">screenshots → OCR → editable UI</text><text x="70" y="350" fill="#899aa2" font-size="14">JavaScript · Canvas · Tesseract</text><text x="70" y="385" fill="#63e6d3" font-size="14">● WORKING PROTOTYPE</text>
-<text x="450" y="132" fill="#ffb84d" font-size="20">NONAME</text><rect x="530" y="160" width="140" height="120" rx="18" fill="#17262d" stroke="#63e6d3" stroke-width="2"/><circle cx="570" cy="205" r="7" fill="#ffb84d"/><circle cx="630" cy="205" r="7" fill="#ffb84d"/><path d="M565 238q35 22 70 0" fill="none" stroke="#63e6d3" stroke-width="4"/><text x="450" y="310" fill="#e8ece9" font-size="15">state → behavior → expression</text><text x="450" y="350" fill="#899aa2" font-size="14">Flutter · Dart · Interaction</text><text x="450" y="385" fill="#ffb84d" font-size="14">● ACTIVE BUILD</text>
-<text x="830" y="132" fill="#63e6d3" font-size="20">RĀY</text><path d="M850 180h250v95H850zM875 205h35v35h-35zM935 205h35v35h-35zM995 205h80" fill="none" stroke="#ffb84d" stroke-width="3"/><circle cx="1075" cy="205" r="7" fill="#63e6d3"/><text x="830" y="310" fill="#e8ece9" font-size="15">sense → interpret → react</text><text x="830" y="350" fill="#899aa2" font-size="14">Sensors · ESP32 exploration · UI</text><text x="830" y="385" fill="#63e6d3" font-size="14">● CONCEPT + R&amp;D</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470">
+<style>
+  .m{font-family:'JetBrains Mono','SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
+  .fb{transform-box:fill-box}
+  @keyframes rise{0%{transform:translateY(40px)}100%{transform:translateY(0)}}
+  @keyframes card{0%{opacity:0;transform:translateY(60px) scale(.92)}60%{opacity:1;transform:translateY(-6px) scale(1.01)}100%{opacity:1;transform:translateY(0) scale(1)}}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  @keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+  @keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.18)}30%{transform:scale(1)}45%{transform:scale(1.1)}}
+  @keyframes eye{0%,90%,100%{transform:scaleY(1)}94%{transform:scaleY(.1)}}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  @keyframes scanx{0%{transform:translateX(0)}100%{transform:translateX(280px)}}
+  @keyframes typeL{0%,10%{transform:scaleX(0)}50%,85%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+  @keyframes wave{0%{transform:scale(.3);opacity:.9}100%{transform:scale(1.6);opacity:0}}
+  @keyframes flow{to{stroke-dashoffset:-40}}
+
+  .ttl{animation:rise .7s cubic-bezier(.16,1,.3,1) .1s both}
+  .c{opacity:0;transform-origin:center;animation:card .9s cubic-bezier(.16,1,.3,1) forwards}
+  .c1{animation-delay:.35s}.c2{animation-delay:.55s}.c3{animation-delay:.75s}.c4{animation-delay:.95s}
+  .bd{stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 1.4s cubic-bezier(.7,0,.2,1) forwards}
+  .in{opacity:0;animation:fade .6s ease-out forwards}
+  .live{animation:pulse 1.6s ease-in-out infinite}
+  .heart{transform-origin:center;animation:beat 1.6s ease-in-out infinite}
+  .eye{transform-origin:center;animation:eye 3.6s ease-in-out infinite}
+  .bob{animation:bob 3s ease-in-out infinite}
+  .scan{animation:scanx 2.4s cubic-bezier(.65,0,.35,1) infinite alternate}
+  .tl{transform-origin:left;animation:typeL 3.2s ease-in-out infinite}
+  .wave{transform-origin:center;animation:wave 2.4s ease-out infinite}
+  .flow{stroke-dasharray:4 36;animation:flow 1.2s linear infinite}
+</style>
+<defs>
+  <clipPath id="ct"><rect x="40" y="28" width="900" height="40"/></clipPath>
+  <clipPath id="lcd"><rect x="66" y="156" width="222" height="112" rx="8"/></clipPath>
+  <linearGradient id="beam" x1="0" x2="1"><stop offset="0" stop-color="#63e6d3" stop-opacity="0"/><stop offset=".5" stop-color="#63e6d3" stop-opacity=".45"/><stop offset="1" stop-color="#63e6d3" stop-opacity="0"/></linearGradient>
+</defs>
+<rect width="1200" height="470" rx="24" fill="#0b1115"/>
+<g clip-path="url(#ct)"><text class="m ttl" x="50" y="58" fill="#f7f4e9" font-size="24">FEATURED BUILDS // PRODUCT SHELF</text></g>
+
+<g class="m">
+  <!-- 1. LCD Mockup Studio -->
+  <g class="c c1 fb">
+    <rect x="46" y="90" width="262" height="330" rx="18" fill="#111c22"/>
+    <rect class="bd" x="46" y="90" width="262" height="330" rx="18" fill="none" stroke="#63e6d3" stroke-width="2" style="animation-delay:.6s"/>
+    <text x="66" y="130" fill="#63e6d3" font-size="17" font-weight="700">LCD MOCKUP STUDIO</text>
+    <rect x="66" y="156" width="222" height="112" rx="8" fill="#17262d"/>
+    <g clip-path="url(#lcd)">
+      <rect class="tl fb" x="84" y="178" width="170" height="5" rx="2" fill="#ffb84d"/>
+      <rect class="tl fb" x="84" y="198" width="120" height="5" rx="2" fill="#ffb84d" style="animation-delay:.3s"/>
+      <rect class="tl fb" x="84" y="218" width="150" height="5" rx="2" fill="#ffb84d" style="animation-delay:.6s"/>
+      <text x="84" y="252" fill="#5d7079" font-size="11">0x3C,0xFF,0x81,0x7E</text>
+      <rect class="scan" x="20" y="156" width="40" height="112" fill="url(#beam)"/>
+    </g>
+    <g class="in" style="animation-delay:1.4s">
+      <text x="66" y="300" fill="#e8ece9" font-size="13">image ⇄ C bitmap · pixel editor</text>
+      <text x="66" y="336" fill="#899aa2" font-size="12">JS · Canvas · CI · 109 tests</text>
+      <circle class="live" cx="72" cy="385" r="5" fill="#63e6d3"/>
+      <text x="84" y="390" fill="#63e6d3" font-size="13">LIVE ON GITHUB PAGES</text>
+    </g>
+  </g>
+
+  <!-- 2. GHARAR -->
+  <g class="c c2 fb">
+    <rect x="328" y="90" width="262" height="330" rx="18" fill="#111c22"/>
+    <rect class="bd" x="328" y="90" width="262" height="330" rx="18" fill="none" stroke="#ffb84d" stroke-width="2" style="animation-delay:.8s"/>
+    <text x="348" y="130" fill="#ffb84d" font-size="17" font-weight="700">GHARAR</text>
+    <rect x="348" y="156" width="222" height="112" rx="8" fill="#17262d"/>
+    <circle cx="410" cy="212" r="22" fill="none" stroke="#c85a32" stroke-width="3"/>
+    <circle cx="508" cy="212" r="22" fill="none" stroke="#a9b8be" stroke-width="3"/>
+    <path class="flow" d="M432 212h54" stroke="#f5ac1f" stroke-width="4" stroke-linecap="round"/>
+    <path class="heart fb" d="M459 200c-6-9-20-4-15 7l15 14 15-14c5-11-9-16-15-7z" fill="#f5ac1f"/>
+    <g class="in" style="animation-delay:1.6s">
+      <text x="348" y="300" fill="#e8ece9" font-size="13">journal · questions · games</text>
+      <text x="348" y="336" fill="#899aa2" font-size="12">Flutter · Dart · CI</text>
+      <circle class="live" cx="354" cy="385" r="5" fill="#ffb84d"/>
+      <text x="366" y="390" fill="#ffb84d" font-size="13">RELEASED v1.0.3</text>
+    </g>
+  </g>
+
+  <!-- 3. NoName -->
+  <g class="c c3 fb">
+    <rect x="610" y="90" width="262" height="330" rx="18" fill="#111c22"/>
+    <rect class="bd" x="610" y="90" width="262" height="330" rx="18" fill="none" stroke="#63e6d3" stroke-width="2" style="animation-delay:1s"/>
+    <text x="630" y="130" fill="#63e6d3" font-size="17" font-weight="700">NONAME</text>
+    <g class="bob">
+      <rect x="681" y="160" width="120" height="104" rx="18" fill="#17262d" stroke="#63e6d3" stroke-width="2"/>
+      <circle class="eye fb" cx="716" cy="200" r="7" fill="#ffb84d"/>
+      <circle class="eye fb" cx="766" cy="200" r="7" fill="#ffb84d"/>
+      <path d="M711 228q30 20 60 0" fill="none" stroke="#63e6d3" stroke-width="4" stroke-linecap="round"/>
+    </g>
+    <g class="in" style="animation-delay:1.8s">
+      <text x="630" y="300" fill="#e8ece9" font-size="13">state → behavior → expression</text>
+      <text x="630" y="336" fill="#899aa2" font-size="12">Flutter · Dart · Canvas</text>
+      <circle class="live" cx="636" cy="385" r="5" fill="#63e6d3"/>
+      <text x="648" y="390" fill="#63e6d3" font-size="13">ACTIVE BUILD</text>
+    </g>
+  </g>
+
+  <!-- 4. RAY -->
+  <g class="c c4 fb">
+    <rect x="892" y="90" width="262" height="330" rx="18" fill="#111c22"/>
+    <rect class="bd" x="892" y="90" width="262" height="330" rx="18" fill="none" stroke="#ffb84d" stroke-width="2" style="animation-delay:1.2s"/>
+    <text x="912" y="130" fill="#ffb84d" font-size="17" font-weight="700">RĀY</text>
+    <rect x="912" y="156" width="222" height="112" rx="8" fill="#17262d"/>
+    <circle class="wave fb" cx="1023" cy="212" r="30" fill="none" stroke="#63e6d3" stroke-width="2"/>
+    <circle class="wave fb" cx="1023" cy="212" r="30" fill="none" stroke="#63e6d3" stroke-width="2" style="animation-delay:.8s"/>
+    <circle class="wave fb" cx="1023" cy="212" r="30" fill="none" stroke="#63e6d3" stroke-width="2" style="animation-delay:1.6s"/>
+    <rect x="1008" y="197" width="30" height="30" rx="6" fill="#111c22" stroke="#ffb84d" stroke-width="3"/>
+    <g class="in" style="animation-delay:2s">
+      <text x="912" y="300" fill="#e8ece9" font-size="13">sense → interpret → react</text>
+      <text x="912" y="336" fill="#899aa2" font-size="12">ESP32 · sensors · TinyML R&amp;D</text>
+      <circle class="live" cx="918" cy="385" r="5" fill="#ffb84d"/>
+      <text x="930" y="390" fill="#ffb84d" font-size="13">CONCEPT + R&amp;D</text>
+    </g>
+  </g>
+</g>
+</svg>
